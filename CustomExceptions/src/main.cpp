@@ -1,5 +1,5 @@
 //============================================================================
-// Name        : Binary.cpp
+// Name        : Custom.cpp
 // Author      : 
 // Version     :
 // Copyright   : Your copyright notice
@@ -7,24 +7,19 @@
 //============================================================================
 
 #include <iostream>
-#include <fstream>
-using namespace std;
-
-#pragma pack(push, 1)
-
-struct Person {
-	char name[50];
-	int age;
-	double weight;
-};
-
-#pragma pack(pop)
+#include <exception>
+#include "../include/modules.hpp"
 
 int main() {
 
-	cout << sizeof(Person) << endl;
+	ce::Test test;
 
-
+	try {
+		test.goesWrong();
+	}
+	catch(ce::myException &e) {
+		std::cout << e.what() << std::endl;
+	}
 
 
 	return 0;

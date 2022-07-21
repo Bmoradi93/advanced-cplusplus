@@ -9,30 +9,14 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include "../include/modules.hpp"
 
 using namespace std;
 
 int main() {
-
-	string inFileName = "test.txt";
-
-	ifstream inFile;
-
-	inFile.open(inFileName);
-
-	if (inFile.is_open()) {
-
-		string line;
-
-		while (inFile) {
-			getline(inFile, line);
-			cout << line << endl;
-		}
-
-		inFile.close();
-	} else {
-		cout << "Cannot open file: " << inFileName << endl;
-	}
+	ns::myClass my_class;
+	std::string file_name = "txt.txt";
+	my_class.readTextFile(file_name);
 
 	return 0;
 }

@@ -1,50 +1,21 @@
 #include <iostream>
 #include <map>
 #include <string>
-
-using namespace std;
-
-class Person {
-private:
-	string name;
-	int age;
-
-public:
-
-	Person() :
-			name(""), age(0) {
-
-	}
-
-	Person(string name, int age) :
-			name(name), age(age) {
-
-	}
-
-	Person(const Person& other){
-		cout << "Copy constructor running!" << endl;
-		name = other.name;
-		age = other.age;
-	}
-
-	void print() {
-		cout << name << ": " << age << endl;
-	}
-};
+#include "../include/modules.hpp"
 
 int main() {
-	map<int, Person> people;
+	std::map<int, ns::Person> people;
 
-	people[50] = Person("Mike", 40);
-	people[32] = Person("Vicky", 30);
-	people[1] = Person("Raj", 20);
+	people[50] = ns::Person("Mike", 40);
+	people[32] = ns::Person("Vicky", 30);
+	people[1] = ns::Person("Raj", 20);
 
-	people.insert(make_pair(55, Person("Bob", 45 )));
-	people.insert(make_pair(55, Person("Sue", 24 )));
+	people.insert(std::make_pair(55, ns::Person("Bob", 45 )));
+	people.insert(std::make_pair(55, ns::Person("Sue", 24 )));
 
-	for (map<int, Person>::iterator it = people.begin(); it != people.end();
+	for (std::map<int, ns::Person>::iterator it = people.begin(); it != people.end();
 			it++) {
-		cout << it->first << ": " << flush;
+		std::cout << it->first << ": " << std::flush;
 		it->second.print();
 	}
 

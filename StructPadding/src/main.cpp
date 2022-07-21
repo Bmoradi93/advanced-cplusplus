@@ -1,5 +1,5 @@
 //============================================================================
-// Name        : Custom.cpp
+// Name        : Binary.cpp
 // Author      : 
 // Version     :
 // Copyright   : Your copyright notice
@@ -7,34 +7,30 @@
 //============================================================================
 
 #include <iostream>
-#include <exception>
+#include <fstream>
+#include "../include/modules.hpp"
 
 using namespace std;
 
-class MyException: public exception {
-public:
-	virtual const char* what() const throw() {
-		return "Something bad happened!";
-	}
-};
+// #pragma pack(push, 1)
 
-class Test {
-public:
-	void goesWrong() {
-		throw MyException();
-	}
-};
+// struct Person {
+// 	char name[50];
+// 	int age;
+// 	double weight;
+// };
+
+// #pragma pack(pop)
 
 int main() {
+	ns::myClass my_class;
+	ns::person p;
+	my_class.getSize(p);
 
-	Test test;
 
-	try {
-		test.goesWrong();
-	}
-	catch(MyException &e) {
-		cout << e.what() << endl;
-	}
+	// cout << sizeof(Person) << endl;
+
+
 
 
 	return 0;

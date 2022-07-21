@@ -9,40 +9,22 @@
 #include <iostream>
 #include <map>
 #include <string>
+#include "../include/modules.hpp"
 
 using namespace std;
 
 int main() {
 
-	map<string, int> ages;
+	map<string, int> mp;
 
-	ages["Mike"] = 40;
-	ages["Raj"] = 20;
-	ages["Vicky"] = 30;
+	mp["Mike"] = 40;
+	mp["Raj"] = 20;
+	mp["Vicky"] = 30;
 
-	ages["Mike"] = 70;
-
-	ages.insert(make_pair("Peter", 100));
-
-	cout << ages["Raj"] << endl;
-
-	if(ages.find("Vicky") != ages.end()) {
-		cout << "Found Vicky" << endl;
-	}
-	else {
-		cout << "Key not found." << endl;
-	}
-
-	for(map<string, int>::iterator it = ages.begin(); it != ages.end(); it++) {
-		pair<string, int> age = *it;
-
-		cout << age.first << ": " << age.second << endl;
-	}
-
-	for(map<string, int>::iterator it = ages.begin(); it != ages.end(); it++) {
-			cout << it->first << ": " << it->second << endl;
-		}
-
+	ns::myClass my_class;
+	// my_class.createMap();
+	// my_class.findElement(mp, "Mike1");
+	my_class.addPairToMap(mp, std::make_pair("Agatha", 25));
 
 	return 0;
 }

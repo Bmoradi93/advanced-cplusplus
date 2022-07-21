@@ -1,5 +1,5 @@
 //============================================================================
-// Name        : Standard.cpp
+// Name        : Vectors.cpp
 // Author      : 
 // Version     :
 // Copyright   : Your copyright notice
@@ -7,26 +7,14 @@
 //============================================================================
 
 #include <iostream>
+#include <vector>
+#include <string> 
+#include "../include/modules.hpp"
+
+
 using namespace std;
 
-class CanGoWrong {
-public:
-	CanGoWrong() {
-		char *pMemory = new char[999];
-		delete[] pMemory;
-	}
-};
-
 int main() {
-
-	try {
-		CanGoWrong wrong;
-	}
-	catch(bad_alloc &e) {
-		cout << "Caught exception: " << e.what() << endl;
-	}
-
-	cout << "Still running" << endl;
-
+	ns::myClass my_class;
 	return 0;
 }
