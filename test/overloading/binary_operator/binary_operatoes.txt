@@ -1,0 +1,37 @@
+Common Binary Operators in C++
+Here's a rundown of some of the most commonly used binary operators in C++:
+
+Arithmetic Operators:
+Addition (+)
+Subtraction (-)
+Multiplication (*)
+Division (/)
+Modulus (%)
+Relational Operators:
+Equal to (==)
+Not equal to (!=)
+Greater than (>)
+Less than (<)
+Greater than or equal to (>=)
+Less than or equal to (<=)
+Logical Operators:
+Logical AND (&&)
+Logical OR (||)
+Bitwise Operators:
+Bitwise AND (&)
+Bitwise OR (|)
+Bitwise XOR (^)
+Bitwise left shift (<<)
+Bitwise right shift (>>)
+Assignment Operators:
+Assignment (=)
+Addition assignment (+=)
+Subtraction assignment (-=)
+Multiplication assignment (*=)
+Division assignment (/=)
+Modulus assignment (%=)
+Bitwise AND assignment (&=)
+Bitwise OR assignment (|=)
+Bitwise XOR assignment (^=)
+Bitwise left shift assignment (<<=)
+Bitwise right shift assignment (>>=)
